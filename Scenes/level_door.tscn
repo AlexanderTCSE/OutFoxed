@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://djq3c3d5danqm"]
+
+[ext_resource type="Texture2D" uid="uid://b3evvy4ei7skc" path="res://Textures/Tiles/Door.png" id="1_mvb03"]
+[ext_resource type="Script" path="res://Scripts/level_door.gd" id="1_y7qxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng46b"]
+size = Vector2(18, 24)
+
+[node name="LevelDoor" type="Node2D"]
+script = ExtResource("1_y7qxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.04348)
+texture = ExtResource("1_mvb03")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ng46b")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

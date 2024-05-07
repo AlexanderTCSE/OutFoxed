@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://gitkxdpd84ec"]
+
+[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="1_j48k1"]
+[ext_resource type="Texture2D" uid="uid://derhxv25h1hod" path="res://Textures/Tiles/flag1.png" id="2_hbtma"]
+[ext_resource type="Texture2D" uid="uid://cxpubkjckhat3" path="res://Textures/Tiles/flagpole.png" id="2_jx5xi"]
+[ext_resource type="Texture2D" uid="uid://dnvltnwf5sgii" path="res://Textures/Tiles/flag2.png" id="3_2u5et"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk6vg"]
+size = Vector2(30, 61)
+
+[sub_resource type="Animation" id="Animation_ox2vu"]
+resource_name = "Activated"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_2u5et"), ExtResource("2_hbtma")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvwgv"]
+_data = {
+"Activated": SubResource("Animation_ox2vu")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_j48k1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jx5xi")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_gk6vg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fvwgv")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

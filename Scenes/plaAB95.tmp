@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://c80mrgr2to1p5"]
+
+[ext_resource type="Texture2D" uid="uid://dbho2dwhn1be" path="res://Textures/Platformerfox.png" id="1_ubt52"]
+[ext_resource type="Script" path="res://Scripts/player2.gd" id="1_wjfnm"]
+[ext_resource type="Script" path="res://Scripts/ropeline.gd" id="3_3i5fg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60wok"]
+atlas = ExtResource("1_ubt52")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or08w"]
+atlas = ExtResource("1_ubt52")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scnft"]
+atlas = ExtResource("1_ubt52")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krjgp"]
+atlas = ExtResource("1_ubt52")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo1ni"]
+atlas = ExtResource("1_ubt52")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ohpl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60wok")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or08w")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scnft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krjgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo1ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krjgp")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1y2ix"]
+height = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujh7v"]
+radius = 1.41421
+
+[node name="Player" type="RigidBody2D"]
+lock_rotation = true
+script = ExtResource("1_wjfnm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5ohpl")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1y2ix")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(400, 0)
+
+[node name="Hook" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hook"]
+shape = SubResource("CircleShape2D_ujh7v")
+disabled = true
+
+[node name="Grapple" type="DampedSpringJoint2D" parent="."]
+node_a = NodePath("..")
+node_b = NodePath("../Hook")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 3.0
+default_color = Color(0.337255, 0.168627, 0.137255, 1)
+script = ExtResource("3_3i5fg")
+
+[node name="GroundCheck" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(0, 12)

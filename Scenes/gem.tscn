@@ -1,0 +1,125 @@
+[gd_scene load_steps=13 format=3 uid="uid://ofs2lgpnlln0"]
+
+[ext_resource type="Script" path="res://Scripts/gem.gd" id="1_gohoe"]
+[ext_resource type="Texture2D" uid="uid://lk0wjtky85rk" path="res://Textures/Tilemaps/gemsparkle.png" id="2_p3la3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ri7x"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adb8c"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv0go"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uehtu"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n6f3"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(0, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnhsj"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(18, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7pdg"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(36, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk7dl"]
+atlas = ExtResource("2_p3la3")
+region = Rect2(54, 18, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6ddl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adb8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv0go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uehtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n6f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnhsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7pdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk7dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ri7x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mggbb"]
+radius = 7.0
+
+[node name="gem" type="Node2D"]
+script = ExtResource("1_gohoe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t6ddl")
+frame_progress = 0.927719
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mggbb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

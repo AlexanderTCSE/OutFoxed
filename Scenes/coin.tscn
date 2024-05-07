@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://belj28xnwug3t"]
+
+[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_mrhgt"]
+[ext_resource type="Texture2D" uid="uid://b8mjj12mxeyui" path="res://Textures/Tilemaps/Forest tilemap.png" id="2_ruugv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwkxd"]
+atlas = ExtResource("2_ruugv")
+region = Rect2(198, 126, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iub3n"]
+atlas = ExtResource("2_ruugv")
+region = Rect2(216, 126, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dp24u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwkxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iub3n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wk47r"]
+radius = 8.06226
+
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_mrhgt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dp24u")
+frame_progress = 0.0380803
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wk47r")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

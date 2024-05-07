@@ -1,0 +1,43 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8cievw50d028"]
+
+[ext_resource type="Script" path="res://Core/SoundFXManager.gd" id="1_3wvmq"]
+[ext_resource type="AudioStream" uid="uid://cns4glk2y88bq" path="res://Audio/ButtonClick.wav" id="1_qtov0"]
+[ext_resource type="AudioStream" uid="uid://cfq0rwfu2f3b0" path="res://Audio/ButtonBack.wav" id="2_kdt37"]
+[ext_resource type="AudioStream" uid="uid://bu1d8lne7ytya" path="res://Audio/NewGame.wav" id="3_0410a"]
+[ext_resource type="AudioStream" uid="uid://dabql8l1o2m08" path="res://Audio/Ambience.wav" id="4_gs1c0"]
+[ext_resource type="AudioStream" uid="uid://bgdq3qx6jig06" path="res://Audio/CoinCollect1.mp3" id="6_h1imj"]
+[ext_resource type="AudioStream" uid="uid://ccg7q43j3wxtd" path="res://Audio/GemCollect1.mp3" id="7_225rk"]
+[ext_resource type="AudioStream" uid="uid://vr4ej43tv5au" path="res://Audio/Checkpoint.wav" id="8_6nf6y"]
+[ext_resource type="AudioStream" uid="uid://cm603fqpu42jw" path="res://Audio/CharacterDeath1.wav" id="9_dbhqc"]
+[ext_resource type="AudioStream" uid="uid://rxc6nhk6vkxl" path="res://Audio/FF7Victory.mp3" id="10_6un8k"]
+
+[node name="SoundFX" type="Node"]
+script = ExtResource("1_3wvmq")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qtov0")
+
+[node name="ButtonBack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kdt37")
+
+[node name="NewGame" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0410a")
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gs1c0")
+
+[node name="CoinCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_h1imj")
+
+[node name="GemCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_225rk")
+
+[node name="Checkpoint" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6nf6y")
+
+[node name="CharacterDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_dbhqc")
+
+[node name="VictoryMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_6un8k")
+volume_db = -15.0

@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://x1g0yn6pp4ho"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_x0rsq"]
+[ext_resource type="Texture2D" uid="uid://cysihoc8blkx" path="res://Textures/BG/background1.png" id="2_l8wc7"]
+[ext_resource type="Texture2D" uid="uid://bdqs41h0kchim" path="res://Textures/BG/background2.png" id="3_6ny10"]
+[ext_resource type="Texture2D" uid="uid://jqx7go6ii6wr" path="res://Textures/Menus/OutFoxedLogo-export.png" id="4_6r6hg"]
+[ext_resource type="Texture2D" uid="uid://3c3ngkcec616" path="res://Textures/Menus/NewGame-export.png" id="5_iy0rg"]
+[ext_resource type="Texture2D" uid="uid://8yo45sy75dax" path="res://Textures/Menus/NewGamePressed-export.png" id="6_rt4k7"]
+[ext_resource type="Texture2D" uid="uid://b2tbxuxapkph3" path="res://Textures/Menus/Options-export.png" id="7_s3g4p"]
+[ext_resource type="Texture2D" uid="uid://psm8lpr1ub4r" path="res://Textures/Menus/OptionsPressed-export.png" id="8_uorqf"]
+[ext_resource type="Texture2D" uid="uid://ddqgp2tjmyedr" path="res://Textures/Menus/Quit-export.png" id="9_dxqsy"]
+[ext_resource type="Texture2D" uid="uid://d2ymfri1h1o7r" path="res://Textures/Menus/QuitPressed-export.png" id="10_a6fbj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x0rsq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l8wc7")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6ny10")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_6r6hg")
+
+[node name="NewGame" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_iy0rg")
+texture_pressed = ExtResource("6_rt4k7")
+
+[node name="Options" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("7_s3g4p")
+texture_pressed = ExtResource("8_uorqf")
+
+[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("9_dxqsy")
+texture_pressed = ExtResource("10_a6fbj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = -213.0
+offset_right = 103.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Early-Alpha ver.
+
+Pretty much everything subject to change!"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

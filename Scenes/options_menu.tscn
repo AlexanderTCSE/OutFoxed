@@ -1,0 +1,162 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3f7o75ouwfr0"]
+
+[ext_resource type="Texture2D" uid="uid://cysihoc8blkx" path="res://Textures/BG/background1.png" id="1_g56g6"]
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_y3kou"]
+[ext_resource type="Texture2D" uid="uid://bdqs41h0kchim" path="res://Textures/BG/background2.png" id="2_yr2ky"]
+[ext_resource type="Texture2D" uid="uid://cviieq4yvx7uy" path="res://Textures/Menus/ScrollGrabber.png" id="3_7q1ad"]
+[ext_resource type="Texture2D" uid="uid://c3gltq4hp0mkx" path="res://Textures/Menus/Back-export.png" id="4_xn3vk"]
+[ext_resource type="Texture2D" uid="uid://c0blyh5fljqoq" path="res://Textures/Menus/BackPressed-export.png" id="5_pcnpq"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3kou")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g56g6")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yr2ky")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -201.0
+offset_right = 136.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resolution" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+item_count = 5
+selected = 1
+popup/item_0/text = "1280*720"
+popup/item_0/id = 2
+popup/item_1/text = "1600*900"
+popup/item_1/id = 0
+popup/item_2/text = "1920*1080"
+popup/item_2/id = 1
+popup/item_3/text = "2560*1440"
+popup/item_3/id = 3
+popup/item_4/text = "3840*2160"
+popup/item_4/id = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/Resolution"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = -2.0
+grow_horizontal = 2
+text = "Resolution"
+
+[node name="MasterVolume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_icons/grabber = ExtResource("3_7q1ad")
+theme_override_icons/grabber_highlight = ExtResource("3_7q1ad")
+theme_override_icons/grabber_disabled = ExtResource("3_7q1ad")
+
+[node name="Label" type="Label" parent="VBoxContainer/MasterVolume"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.0
+offset_right = 59.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Master Volume"
+
+[node name="MusicVolume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_icons/grabber = ExtResource("3_7q1ad")
+theme_override_icons/grabber_highlight = ExtResource("3_7q1ad")
+theme_override_icons/grabber_disabled = ExtResource("3_7q1ad")
+
+[node name="Label" type="Label" parent="VBoxContainer/MusicVolume"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.5
+offset_right = 54.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Music Volume"
+
+[node name="SFXVolume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_icons/grabber = ExtResource("3_7q1ad")
+theme_override_icons/grabber_highlight = ExtResource("3_7q1ad")
+theme_override_icons/grabber_disabled = ExtResource("3_7q1ad")
+
+[node name="Label" type="Label" parent="VBoxContainer/SFXVolume"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.5
+offset_right = 45.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "SFX Volume"
+
+[node name="OptionsBack" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -64.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_xn3vk")
+texture_pressed = ExtResource("5_pcnpq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -305.0
+offset_right = 154.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "(this doesn't do anything yet, I just wanted to get buttons set up and menu navigation down)"
+
+[connection signal="pressed" from="OptionsBack" to="." method="_on_options_back_pressed"]

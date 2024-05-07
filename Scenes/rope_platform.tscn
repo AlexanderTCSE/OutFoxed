@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqekrt2nc4ta8"]
+
+[ext_resource type="Script" path="res://Scripts/rope_platform.gd" id="1_4sfyd"]
+[ext_resource type="Texture2D" uid="uid://dsk0w3mjnf2mb" path="res://Textures/Tiles/swingingplatform.png" id="1_27gv8"]
+[ext_resource type="Script" path="res://Scripts/platformline.gd" id="1_b2h6s"]
+[ext_resource type="Texture2D" uid="uid://c5yl70rxsgtax" path="res://Textures/Tiles/Rope.png" id="2_6nxur"]
+[ext_resource type="Texture2D" uid="uid://dfgnryr3ekpyj" path="res://Textures/Tiles/Pivot.png" id="2_u3hc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsh8j"]
+size = Vector2(54, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_csdv7"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bj4cm"]
+radius = 2.0
+
+[node name="RopePlatform" type="Node2D"]
+position = Vector2(0, -3)
+script = ExtResource("1_4sfyd")
+
+[node name="Rope" type="DampedSpringJoint2D" parent="."]
+position = Vector2(0, -231)
+node_a = NodePath("../Pivot")
+node_b = NodePath("../PlatformJoint")
+length = 225.0
+stiffness = 63.5
+
+[node name="Platformline" type="Line2D" parent="."]
+width = 18.0
+texture = ExtResource("2_6nxur")
+texture_mode = 1
+script = ExtResource("1_b2h6s")
+
+[node name="Platform" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+texture = ExtResource("1_27gv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_jsh8j")
+
+[node name="Pivot" type="StaticBody2D" parent="."]
+position = Vector2(0, -231)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot"]
+texture = ExtResource("2_u3hc0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot"]
+shape = SubResource("CircleShape2D_csdv7")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(0, -6)
+node_a = NodePath("../PlatformJoint")
+node_b = NodePath("../Platform")
+
+[node name="PlatformJoint" type="RigidBody2D" parent="."]
+position = Vector2(0, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformJoint"]
+shape = SubResource("CircleShape2D_bj4cm")

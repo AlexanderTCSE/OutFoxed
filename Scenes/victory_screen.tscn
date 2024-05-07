@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://4aoamkrbsi5e"]
+
+[ext_resource type="Script" path="res://Scripts/victory_screen.gd" id="1_3mnwl"]
+[ext_resource type="Texture2D" uid="uid://cysihoc8blkx" path="res://Textures/BG/background1.png" id="2_kkbba"]
+[ext_resource type="Texture2D" uid="uid://bdqs41h0kchim" path="res://Textures/BG/background2.png" id="3_826g7"]
+[ext_resource type="Texture2D" uid="uid://d311omc8sh54s" path="res://Textures/Menus/Victory Royale.png" id="4_t3o7a"]
+[ext_resource type="Texture2D" uid="uid://3c3ngkcec616" path="res://Textures/Menus/NewGame-export.png" id="5_ukev5"]
+[ext_resource type="Texture2D" uid="uid://8yo45sy75dax" path="res://Textures/Menus/NewGamePressed-export.png" id="6_bcfic"]
+[ext_resource type="Texture2D" uid="uid://ddqgp2tjmyedr" path="res://Textures/Menus/Quit-export.png" id="7_itkvb"]
+[ext_resource type="Texture2D" uid="uid://d2ymfri1h1o7r" path="res://Textures/Menus/QuitPressed-export.png" id="8_atdrh"]
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3mnwl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kkbba")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_826g7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 480
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 480
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_t3o7a")
+stretch_mode = 3
+
+[node name="NewGame" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_ukev5")
+texture_pressed = ExtResource("6_bcfic")
+
+[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_itkvb")
+texture_pressed = ExtResource("8_atdrh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Thank you for playing the OutFoxed early pre-alpha tech demo lite build!
+Feedback is appreciated, there are more levels and deeper mechanics coming soon."
+fit_content = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
