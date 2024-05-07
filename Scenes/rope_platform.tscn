@@ -33,6 +33,7 @@ texture_mode = 1
 script = ExtResource("1_b2h6s")
 
 [node name="Platform" type="RigidBody2D" parent="."]
+lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
 texture = ExtResource("1_27gv8")
