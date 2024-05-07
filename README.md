@@ -3,7 +3,9 @@ OutFoxed is a game I developed for my Service Learning Project at Clark College.
 
 ## Controls
 A/D - Left/Right
+
 Space - Jump
+
 M1 - Grapple
 
 ## Installation
