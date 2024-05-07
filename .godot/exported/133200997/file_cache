@@ -1,0 +1,13 @@
+res://Scenes/main_menu.tscn::dd5377448ab174a21957459be3268907::1715061467::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
+res://Scenes/options_menu.tscn::0e75111e007e70c07adeae3eef91c04c::1715061467::res://.godot/exported/133200997/export-2cb447b37aa82b73ba6d31cbf3c6d6c9-options_menu.scn
+res://Scenes/pause_menu.tscn::66c38908d82944ab24fddd867e6c074e::1715061467::res://.godot/exported/133200997/export-e3d0420ddeb812b15edf3553f5556843-pause_menu.scn
+res://Scenes/player.tscn::8e649bbe7cfe4eb5e2f76204d95ff44d::1715061785::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/world.tscn::9df673adecbb1f0d1daec9648e9e7e29::1715061541::res://.godot/exported/133200997/export-0271e18ecf37a36b455ad0b215994549-world.scn
+res://Scenes/sound_fx.tscn::d83436b4f8fdf482d358c5bb97316907::1715061467::res://.godot/exported/133200997/export-a0d0956688475832fead878495fbb6eb-sound_fx.scn
+res://Scenes/checkpoint.tscn::7540294e06c3ed2b551a80aa66f8d003::1715061467::res://.godot/exported/133200997/export-a949f5727efbcb9d86c97aa0e0f0814e-checkpoint.scn
+res://Scenes/coin.tscn::45c3cf8503bb20d13de0200c15757045::1715061467::res://.godot/exported/133200997/export-cfd538a465b9799b811984d89e43d2b9-coin.scn
+res://Scenes/gem.tscn::ce1fd8e2f4d96972f8a5c53c782892e8::1715061467::res://.godot/exported/133200997/export-f476d08823c84403d61e1b89e40e90aa-gem.scn
+res://Scenes/spikes.tscn::c86477906a37ca3ce5e45224bab7e749::1715061467::res://.godot/exported/133200997/export-be8acbdb54f1fde03380f93fe1460f42-spikes.scn
+res://Scenes/rope_platform.tscn::c78a01004951ed91ec62742e51cf4948::1715061467::res://.godot/exported/133200997/export-eebf46fccec748e9a0e6eb0b5c3bb3bf-rope_platform.scn
+res://Scenes/level_door.tscn::447beacaf92f62fe96026962d33c4d83::1715061467::res://.godot/exported/133200997/export-73dc64a93dd66c810e2aa2f9c8432a11-level_door.scn
+res://Scenes/victory_screen.tscn::1b8b41d2d8cd3b6c998c777a18bc69d3::1715061467::res://.godot/exported/133200997/export-e01cc5870871b86afb9e391f6a63fdf9-victory_screen.scn

@@ -1,0 +1,14 @@
+res://Scenes/world.tscn
+res://Shaders/pause_menu.gdshader
+res://Scenes/level_door.tscn
+res://Scenes/player.tscn
+res://Scenes/main_menu.tscn
+res://Scenes/pause_menu.tscn
+res://Scenes/options_menu.tscn
+res://Scenes/victory_screen.tscn
+res://Scenes/sound_fx.tscn
+res://Scenes/coin.tscn
+res://Scenes/gem.tscn
+res://Scenes/checkpoint.tscn
+res://Scenes/spikes.tscn
+res://Scenes/rope_platform.tscn
