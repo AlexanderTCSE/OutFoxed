@@ -13,6 +13,7 @@ Download and unzip OutFoxed.zip, then run OutFoxed.exe
 
 ## Support
 Discord: bobbysenpai
+
 E-mail: tattersallalexd@gmail.com
 
 ## Authors and acknowledgment
