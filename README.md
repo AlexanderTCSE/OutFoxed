@@ -12,7 +12,8 @@ M1 - Grapple
 Download and unzip OutFoxed.zip, then run OutFoxed.exe
 
 ## Support
-bobbysenpai on Discord
+Discord: bobbysenpai
+E-mail: tattersallalexd@gmail.com
 
 ## Authors and acknowledgment
 [Kenney's free game assets](https://kenney.nl/assets)
