@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dqekrt2nc4ta8"]
 
-[ext_resource type="Script" path="res://Scripts/rope_platform.gd" id="1_4sfyd"]
+[ext_resource type="Script" uid="uid://kwin0b172e0v" path="res://Scripts/rope_platform.gd" id="1_4sfyd"]
 [ext_resource type="Texture2D" uid="uid://dsk0w3mjnf2mb" path="res://Textures/Tiles/swingingplatform.png" id="1_27gv8"]
-[ext_resource type="Script" path="res://Scripts/platformline.gd" id="1_b2h6s"]
+[ext_resource type="Script" uid="uid://1oxo2w0jthcj" path="res://Scripts/platformline.gd" id="1_b2h6s"]
 [ext_resource type="Texture2D" uid="uid://c5yl70rxsgtax" path="res://Textures/Tiles/Rope.png" id="2_6nxur"]
 [ext_resource type="Texture2D" uid="uid://dfgnryr3ekpyj" path="res://Textures/Tiles/Pivot.png" id="2_u3hc0"]
 

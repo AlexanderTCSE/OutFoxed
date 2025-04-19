@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c8cievw50d028"]
 
-[ext_resource type="Script" path="res://Core/SoundFXManager.gd" id="1_3wvmq"]
+[ext_resource type="Script" uid="uid://nphag7xgvamh" path="res://Core/SoundFXManager.gd" id="1_3wvmq"]
 [ext_resource type="AudioStream" uid="uid://cns4glk2y88bq" path="res://Audio/ButtonClick.wav" id="1_qtov0"]
 [ext_resource type="AudioStream" uid="uid://cfq0rwfu2f3b0" path="res://Audio/ButtonBack.wav" id="2_kdt37"]
 [ext_resource type="AudioStream" uid="uid://bu1d8lne7ytya" path="res://Audio/NewGame.wav" id="3_0410a"]

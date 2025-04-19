@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://belj28xnwug3t"]
 
-[ext_resource type="Script" path="res://Scripts/coin.gd" id="1_mrhgt"]
+[ext_resource type="Script" uid="uid://b2c0j82axdl8f" path="res://Scripts/coin.gd" id="1_mrhgt"]
 [ext_resource type="Texture2D" uid="uid://b8mjj12mxeyui" path="res://Textures/Tilemaps/Forest tilemap.png" id="2_ruugv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rwkxd"]

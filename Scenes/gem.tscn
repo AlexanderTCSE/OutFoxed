@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ofs2lgpnlln0"]
 
-[ext_resource type="Script" path="res://Scripts/gem.gd" id="1_gohoe"]
+[ext_resource type="Script" uid="uid://dutv2c0ehihkj" path="res://Scripts/gem.gd" id="1_gohoe"]
 [ext_resource type="Texture2D" uid="uid://lk0wjtky85rk" path="res://Textures/Tilemaps/gemsparkle.png" id="2_p3la3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ri7x"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://gitkxdpd84ec"]
 
-[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="1_j48k1"]
+[ext_resource type="Script" uid="uid://brwl2fdl6idpp" path="res://Scripts/checkpoint.gd" id="1_j48k1"]
 [ext_resource type="Texture2D" uid="uid://derhxv25h1hod" path="res://Textures/Tiles/flag1.png" id="2_hbtma"]
 [ext_resource type="Texture2D" uid="uid://cxpubkjckhat3" path="res://Textures/Tiles/flagpole.png" id="2_jx5xi"]
 [ext_resource type="Texture2D" uid="uid://dnvltnwf5sgii" path="res://Textures/Tiles/flag2.png" id="3_2u5et"]
@@ -26,7 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fvwgv"]
 _data = {
-"Activated": SubResource("Animation_ox2vu")
+&"Activated": SubResource("Animation_ox2vu")
 }
 
 [node name="Checkpoint" type="Node2D"]
@@ -44,7 +44,7 @@ shape = SubResource("RectangleShape2D_gk6vg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_fvwgv")
+&"": SubResource("AnimationLibrary_fvwgv")
 }
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

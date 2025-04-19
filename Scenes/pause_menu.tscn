@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://clxh18us4vv2i"]
 
 [ext_resource type="Texture2D" uid="uid://60dg6oi2ilr5" path="res://Textures/Menus/Resume-export.png" id="1_ffp2w"]
-[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_ty7m0"]
-[ext_resource type="Shader" path="res://Shaders/pause_menu.gdshader" id="2_7e6vw"]
+[ext_resource type="Script" uid="uid://dnfobm1p046ty" path="res://Scripts/pause_menu.gd" id="1_ty7m0"]
+[ext_resource type="Shader" uid="uid://bdlh1ga08oyfh" path="res://Shaders/pause_menu.gdshader" id="2_7e6vw"]
 [ext_resource type="Texture2D" uid="uid://qdkdmo1y5x7i" path="res://Textures/Menus/ResumePressed-export.png" id="2_shw63"]
 [ext_resource type="Texture2D" uid="uid://ddqgp2tjmyedr" path="res://Textures/Menus/Quit-export.png" id="3_7c4y2"]
 [ext_resource type="Texture2D" uid="uid://d2ymfri1h1o7r" path="res://Textures/Menus/QuitPressed-export.png" id="4_62i2a"]

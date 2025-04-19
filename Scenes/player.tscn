@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://c80mrgr2to1p5"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_otl36"]
+[ext_resource type="Script" uid="uid://dvpj441pro5e4" path="res://Scripts/player.gd" id="1_otl36"]
 [ext_resource type="Texture2D" uid="uid://dbho2dwhn1be" path="res://Textures/Tilemaps/Platformerfox.png" id="1_ubt52"]
-[ext_resource type="Script" path="res://Scripts/ropeline.gd" id="3_3i5fg"]
+[ext_resource type="Script" uid="uid://klf68xgk4jhg" path="res://Scripts/ropeline.gd" id="3_3i5fg"]
 [ext_resource type="Texture2D" uid="uid://cmcdqvcm2fwyv" path="res://Textures/Tiles/Hook.png" id="3_c50by"]
 [ext_resource type="Texture2D" uid="uid://c5yl70rxsgtax" path="res://Textures/Tiles/Rope.png" id="3_d0tpm"]
 [ext_resource type="Texture2D" uid="uid://csdtehkknnqas" path="res://Textures/Tiles/AimHook2.png" id="5_6y5od"]

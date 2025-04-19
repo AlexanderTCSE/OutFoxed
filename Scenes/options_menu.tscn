@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3f7o75ouwfr0"]
 
 [ext_resource type="Texture2D" uid="uid://cysihoc8blkx" path="res://Textures/BG/background1.png" id="1_g56g6"]
-[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_y3kou"]
+[ext_resource type="Script" uid="uid://bkeeq5x5us3x7" path="res://Scripts/options_menu.gd" id="1_y3kou"]
 [ext_resource type="Texture2D" uid="uid://bdqs41h0kchim" path="res://Textures/BG/background2.png" id="2_yr2ky"]
 [ext_resource type="Texture2D" uid="uid://cviieq4yvx7uy" path="res://Textures/Menus/ScrollGrabber.png" id="3_7q1ad"]
 [ext_resource type="Texture2D" uid="uid://c3gltq4hp0mkx" path="res://Textures/Menus/Back-export.png" id="4_xn3vk"]
@@ -50,8 +50,8 @@ grow_vertical = 2
 
 [node name="Resolution" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
-item_count = 5
 selected = 1
+item_count = 5
 popup/item_0/text = "1280*720"
 popup/item_0/id = 2
 popup/item_1/text = "1600*900"
